@@ -1,0 +1,29 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/postgres
+{
+	// Rename the container as desired
+	"name": "baseDjangoContainer",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "web",
+	"workspaceFolder": "/code",
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// This can be used to network with other containers or the host.
+	"forwardPorts": [8000],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"batisteo.vscode-django"
+			],
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"emmet.includeLanguages": {
+					"django-html": "html"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+FROM python:3.12
+
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+
+WORKDIR /code
+
+COPY requirements.txt /code/
+RUN pip3 --disable-pip-version-check --no-cache-dir install -r requirements.txt
+
+
+# Create a user account that'll be used for file ownership instead of root.
+# Using a UID of 1000 should match with default user on most linux distros
+# for volume sync.
+RUN adduser --uid 1000 --disabled-password --gecos "" vscode && chown -R vscode /code
+USER vscode
