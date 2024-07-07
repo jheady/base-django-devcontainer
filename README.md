@@ -7,10 +7,12 @@ Using a test driven development (TDD) style, I ran into an issue where I was una
 
 Created a script for quick project preparation off this base.
 
+The image takes a few minutes to pull depending on your internet speeds. The install of Chrome pulls in quite a few packages.
+
 # Usage
 In order to use this, either clone the repository, then change the name in devcontaner.json. Or use the script project_setup.sh.
 
-The script project_setup.sh takes a single argument, the name of the new project to develop. The script will break if you try to use a new project name with a space in it.
+The script project_setup.sh takes a single argument, the name of the new project to develop. It will change the name of the devcontainer from the cloned repo. The script will break if you try to use a new project name with a space in it.
 
 ```
 ./project_setup.sh new_project
