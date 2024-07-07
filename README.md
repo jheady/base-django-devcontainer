@@ -8,10 +8,12 @@ Using a test driven development (TDD) style, I ran into an issue where I was una
 Created a script for quick project preparation off this base.
 
 # Usage
-In order to use this, either clone the repository, then change the name in devcontaner.json, along with the postgres password in the docker-compose yaml. Or use the script project_setup.sh.
+In order to use this, either clone the repository, then change the name in devcontaner.json. Or use the script project_setup.sh.
 
 The script project_setup.sh takes a single argument, the name of the new project to develop. The script will break if you try to use a new project name with a space in it.
 
 ```
 ./project_setup.sh new_project
 ```
+
+Once the new project has been created, change the postgres password in the docker-compose yaml.
